@@ -825,6 +825,105 @@ a {
   opacity: 0.75;
 }
 
+/* ===== CODE GATE ===== */
+.gate {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(ellipse 60% 45% at 50% -10%, rgba(236, 55, 80, 0.22), transparent 70%),
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    var(--bg);
+  background-size: auto, 42px 42px, 42px 42px, auto;
+}
+.gate-card {
+  width: min(430px, 100%);
+  text-align: center;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 34px 28px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+}
+.gate-card img {
+  height: 54px;
+  margin-bottom: 10px;
+}
+.gate-card h2 {
+  margin: 4px 0 8px;
+  font-size: 27px;
+  letter-spacing: -0.02em;
+}
+.gate-sub {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 18px;
+}
+#gate-form {
+  display: flex;
+  gap: 8px;
+}
+#gate-input {
+  flex: 1;
+  min-width: 0;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #0d1219;
+  color: var(--ink);
+  font: inherit;
+}
+#gate-input:focus {
+  outline: none;
+  border-color: var(--red);
+}
+#gate-form button {
+  padding: 11px 18px;
+  border-radius: 10px;
+  border: none;
+  background: var(--red);
+  color: #fff;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: filter 0.15s;
+}
+#gate-form button:hover {
+  filter: brightness(1.12);
+}
+.gate-error {
+  color: var(--red);
+  font-size: 13.5px;
+  margin: 12px 0 0;
+}
+.gate-note {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 16px 0 0;
+  opacity: 0.8;
+}
+.gate.shake {
+  animation: gate-shake 0.4s;
+}
+@keyframes gate-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-8px);
+  }
+  40%,
+  80% {
+    transform: translateX(8px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;

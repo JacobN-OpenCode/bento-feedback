@@ -143,8 +143,32 @@
       </div>
     </footer>
 
-    <script src="land.js"></script>
-    <script src="data.js"></script>
-    <script src="app.js"></script>
+    <!-- CODE GATE: shown first; the site's scripts only load after the code is entered -->
+    <div class="gate" id="gate" role="dialog" aria-modal="true" aria-label="Enter the access code">
+      <div class="gate-card">
+        <img src="https://bento.hackclub.com/assets/bento-ysws-logo.png" alt="Bento" />
+        <p class="kicker">Hack Club Bento · feedback</p>
+        <h2>This board is locked 🔒</h2>
+        <p class="gate-sub">Enter the code to see what 32 builders said about Bento.</p>
+        <form id="gate-form" autocomplete="off">
+          <input
+            id="gate-input"
+            type="password"
+            placeholder="the code"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            aria-label="Access code"
+          />
+          <button type="submit">Unlock 🍣</button>
+        </form>
+        <p class="gate-error" id="gate-error" hidden></p>
+        <p class="gate-note">
+          The code isn't stored in this site — only a fingerprint is. Reload and you'll be asked again.
+        </p>
+      </div>
+    </div>
+
+    <script src="gate.js"></script>
   </body>
 </html>
