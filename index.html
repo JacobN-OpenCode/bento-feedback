@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bento Feedback — what builders told Hack Club</title>
+    <meta
+      name="description"
+      content="Every response from the Hack Club Bento feedback form: categorised themes, stats, a globe of where builders are, and every quote."
+    />
+    <link rel="icon" href="https://bento.hackclub.com/assets/bento-ysws-logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grid-bg" aria-hidden="true"></div>
+
+    <!-- NAV -->
+    <header class="nav">
+      <a class="nav-brand" href="https://bento.hackclub.com" target="_blank" rel="noopener">
+        <img class="nav-flag" src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hack Club" />
+        <img class="nav-bento" src="https://bento.hackclub.com/assets/bento-ysws-logo.png" alt="Bento" />
+        <span>Bento&nbsp;<em>Feedback</em></span>
+      </a>
+      <nav class="nav-links">
+        <a href="#globe">Globe</a>
+        <a href="#themes">Themes</a>
+        <a href="#scores">Scores</a>
+        <a href="#voices">Voices</a>
+        <a href="#all">All responses</a>
+        <a class="nav-cta" href="https://bento.hackclub.com" target="_blank" rel="noopener">bento.hackclub.com&nbsp;↗</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <img class="hero-sushi" src="https://cdn.hackclub.com/01a09afa-f9dd-735e-8146-a0eee5d2172a/sushi.png" alt="Sushi plushie" />
+      <p class="kicker">Hack Club Bento · builder feedback</p>
+      <h1>
+        <span id="hero-count">…</span> builders told us<br />
+        <span class="grad">exactly what they think.</span>
+      </h1>
+      <p class="lede">
+        Every response from Bento's feedback form — what people loved, what they want changed, where in the world they
+        are, and how they found a YSWS about shipping sushi. Categorised, counted, and put on a globe.
+      </p>
+      <div class="stat-row" id="hero-stats"><!-- built by app.js --></div>
+      <div class="hero-links">
+        <a class="btn" href="#voices">Read the voices ↓</a>
+        <a class="btn ghost" href="https://hackclub.com/brand" target="_blank" rel="noopener">hackclub.com/brand ↗</a>
+      </div>
+    </section>
+
+    <!-- GLOBE -->
+    <section id="globe" class="section">
+      <div class="section-head">
+        <p class="kicker">Around the world</p>
+        <h2>Where the feedback came from</h2>
+        <p class="section-sub">
+          12 countries across 5 continents. Drag the globe, hover a marker, or tap a country to filter every quote on
+          this page.
+        </p>
+      </div>
+      <div class="globe-wrap panel">
+        <div class="globe-stage">
+          <canvas id="globe-canvas" aria-label="Interactive globe of feedback countries"></canvas>
+          <div id="globe-tip" class="globe-tip" hidden></div>
+          <p class="globe-hint" id="globe-hint">drag to spin · click a marker to filter</p>
+        </div>
+        <aside class="country-bars" id="country-bars"><!-- built by app.js --></aside>
+      </div>
+      <p class="fineprint" id="globe-note"></p>
+    </section>
+
+    <!-- THEMES -->
+    <section id="themes" class="section">
+      <div class="section-head">
+        <p class="kicker">Categorised</p>
+        <h2>What everyone's actually saying</h2>
+        <p class="section-sub">
+          Every answer was sorted into themes (a response can hit several). Click a card to filter the quotes below.
+        </p>
+      </div>
+      <div class="theme-grid" id="theme-grid"><!-- built by app.js --></div>
+    </section>
+
+    <!-- PIPELINE + NPS + CHANNELS -->
+    <section id="scores" class="section">
+      <div class="section-head">
+        <p class="kicker">The read-out</p>
+        <h2>Scores &amp; discovery</h2>
+      </div>
+
+      <div class="three-col">
+        <div class="panel">
+          <h3>Vibe score <span class="tag">sentiment</span></h3>
+          <p class="panel-sub">My read of each response's tone — promoters minus detractors.</p>
+          <div id="nps-gauge" class="nps"></div>
+        </div>
+
+        <div class="panel">
+          <h3>How they found Bento</h3>
+          <p class="panel-sub">Self-reported discovery channel.</p>
+          <div id="channel-bars"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VOICES -->
+    <section id="voices" class="section">
+      <div class="section-head">
+        <p class="kicker">In their words</p>
+        <h2>The voice wall</h2>
+        <p class="section-sub" id="voice-count">Praise and gripes, verbatim (typos lovingly preserved).</p>
+      </div>
+      <div class="chips" id="filter-chips" role="tablist" aria-label="Filter quotes by theme"></div>
+      <div class="filter-status" id="filter-status" hidden></div>
+      <div class="masonry" id="voice-wall"><!-- built by app.js --></div>
+    </section>
+
+    <!-- ALL RESPONSES -->
+    <section id="all" class="section">
+      <div class="section-head">
+        <p class="kicker">The full table</p>
+        <h2 id="all-title">All responses</h2>
+        <p class="section-sub">Project and live-site links where they submitted one. Review status stays private.</p>
+      </div>
+      <div class="cards" id="response-cards"><!-- built by app.js --></div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="https://bento.hackclub.com/assets/bento-ysws-logo.png" alt="Bento" />
+          <img src="https://assets.hackclub.com/flag-orpheus-top.svg" alt="Hack Club" />
+        </div>
+        <p>
+          Built from the feedback Bento builders left during the YSWS. Logos &amp; imagery hotlinked from
+          <a href="https://hackclub.com/brand" target="_blank" rel="noopener">hackclub.com/brand</a>,
+          <a href="https://bento.hackclub.com" target="_blank" rel="noopener">bento.hackclub.com</a> and
+          cdn.hackclub.com — nothing downloaded, all © Hack Club.
+        </p>
+        <p class="muted">Bento is a Clubs &amp; Individual YSWS by Jacob, Freddie &amp; sponsored by Jared.</p>
+      </div>
+    </footer>
+
+    <script src="land.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
